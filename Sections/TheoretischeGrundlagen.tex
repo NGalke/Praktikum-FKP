@@ -1,0 +1,72 @@
+\section{Theoretische Grundlagen}
+
+\renewcommand{\V}[1]{\textbf{#1}}
+
+\subsection{Klassischer Hall-Effekt}\label{sc:HallEffekt}
+
+Bringt man einen stromführenden Leiter in ein äußeres Magnetfeld mit nicht zum Leiter paralleler Flussrichtung, so kann man senkrecht zur Stromrichtung eine Spannung (die \emph{Hall-Spannung}) messen. Dies bezeichnet man als \emph{Hall-Effekt}.
+Dieser kann klassisch wie folgt erklärt werden:
+Bewegen sich die Ladungsträger in einem Magnetfeld, das einen senkrechten Anteil zur Bewegungsrichtung hat, so wirkt auf die Ladungsträger (Ladung $q$, Geschwindigkeit $v$) eine nicht-verschwindende \emph{Lorentz-Kraft} senkrecht zum Strom und zum Magnetfeld (zumindest bei fehlenden äußeren elektrischen Feldern). Die dadurch hervorgerufene Ablenkung der Ladungsträger führt zur Ausbildung eines elektrischen Feldes, welches eine der ablenkenden Kraft entgegengerichtete Kraft erzeugt. Dieses \emph{Hall-Feld} baut sich solange auf, bis die daraus resultierende Kraft die des Magnetfeldes gerade kompensiert.
+Es folgt die Bedingung an die Lorentz-Kraft
+$$\V F_L = q(\V E_H + \V B\times \V v) = 0,$$
+wobei $\V E_H$ das Hall-Feld bezeichne und $\V B$ senkrecht zum Strom sei.
+Dadurch lassen sich die relevanten Größen in Beziehung setzen. Für die Hall-Spannung $U_H$ gilt bei einer Stromstärke $I$
+\begin{equation}\label{eq:HallSpannung}
+U_H\propto\frac{I\cdot B}{(\text{Probendicke}\parallel \V B)}.
+\end{equation}
+Die auftretende Proportionalitätskonstante wird \emph{Hall-Konstante} genannt und mit $A_H$ bezeichnet. Für diese gilt bei Leitung durch nur eine Sorte Ladungsträger
+\begin{equation}
+A_H = \frac{1}{nq}
+\end{equation}
+wobei $n$ die Ladungsträgerdichte (bzw. -konzentration) bezeichne. Diese kann also (bei
+bekanntem $q$) durch Messung der Hall-Konstante bestimmt werden.
+Anstatt $U_H$ lässt sich auch der \emph{Hall-Widerstand}
+\begin{equation}\label{eq:HallWiderstand}
+R_H = \frac{U_H}{I}
+\end{equation}
+betrachten, welcher zwar die Dimension eines Widerstands hat, jedoch nicht direkt mit einem „realen“ Widerstand identifiziert werden kann.\\
+Gemessen werden jedoch stets $U_H$ und $I$.
+
+\subsection{Zweidimensionales Elektronengas}
+Um den \emph{Quanten-Hall-Effekt} beschreiben zu können, benötigt man das Modell des \emph{(2-dimensionalen) Elektronengases}\footnote{kurz: (2D)EG}.
+Das EG ist ein Spezialfall des \emph{(idealen) Fermi-Gases}. Das ideale Fermi-Gas beschreibt passende Systeme durch ein Ensemble von nicht miteinander wechselwirkenden Fermionen in einem Potentialtopf, analog zum idealen Gas.
+Angewandt auf die Elektronen im Festkörper bedeutet das also, dass neben den Wechselwirkungen der Elektronen miteinander auch das periodische Kristallpotential nicht wirklich berücksichtigt wird. Dies kann aber zumindest teilweise durch das Bloch-Theorem gerechtfertigt werden, aus welchem sich ableiten lässt, dass die Dispersionsrelation der Elektronen im Kristall (unter den richtigen Umständen) die eines freien Teilchens mit
+einer passenden \emph{effektiven Masse} ist (\cite{czy15}).
+Speziell beim 2DEG nimmt man das Potential in einer Raumrichtung als Potentialtopf an. Für diese Richtung ergeben sich, wie für einen Potentialtopf üblich, (endlich viele) diskrete Energieniveaus. Die Menge der Lösungen der (stationären) eindimensionalen Schrödinger-Gleichung zu je einem dieser Energieeigenwerte bezeichnet man als \emph{Subband}.
+In den anderen beiden Richtungen kann die Bewegung ungehindert ablaufen, wird also durch den Hamilton-Operator eines zweidimensionalen freien Teilchens beschrieben, jedoch mit einer effektiven Masse anstatt der üblichen Elektronenmasse.
+Praktisch kann ein 2DEG z.B. an Grenzflächen passender Heterostrukturen erzeugt werden.
+
+\subsection{Quanten-Hall-Effekt}
+Führt man an einem 2DEG Versuche zum Hall-Effekt bei sehr niedrigen Temperaturen durch, so beobachtet man ein anderes Verhalten des Hall-Widerstands. Anstatt linear mit dem Magnetfeld anzuwachsen, bilden sich \emph{Hall-Plateaus} aus, die mit stärkerem Magnetfeld ausgeprägter werden. Beim Längswiderstand, also dem „realen“ Widerstand in Richtung des Stroms, kann man zudem die \emph{Shubnikov-de-Haas-Oszillationen} beobachten. Die Minima dieser Oszillation des Widerstands findet man bei denselben Feldstärken, wie die Hall-Plateaus. Für den Wert des Hall-Widerstands ergibt sich an diesen Stellen
+$$R_H = \frac{1}{\nu}R_K$$
+wobei
+$$R_K := \frac{h}{e^2}$$
+als \emph{von-Klitzing-Konstante} bezeichnet wird und $\nu$ der sogenannte \emph{Füllfaktor} ist. Dieser nimmt zunächst ganzzahlige Werte an, die bei wachsenden Magentfeldern kleiner werden. Bei sehr hohen Magentfeldern erhält man jedoch auch echt rationale Werte für $\nu$. Man unterscheidet entsprechend den \emph{integralen} und den \emph{fraktionalen Quanten-Hall-
+Effekt}.
+Dem Füllfaktor lässt sich noch eine andere Bedeutung geben, welche auch die Namensgebung begründet.
+In einem äußeren Magnetfeld wird die Bewegung der Elektronen auch in der „freien“ Ebene beeinflusst und entspricht dann nicht mehr der von freien Teilchen. Hat das Magnetfeld eine zur Ebene senkrechte Komponente, so lässt sich (klassisch) erklären, dass die Elektronen durch die Lorentz-Kraft auf Kreisbahnen gezwungen werden (vgl. \autoref{sc:HallEffekt}). Auf diesen bewegen sie sich mit der \emph{Zyklotronfrequenz}
+$$\omega_C = \frac{eB}{m^*}$$
+wobei das Magnetfeld $\V B$ wieder als senkrecht zur Ebene angenommen wurde und $m^*$ die effektive Masse bezeichne. Berechnet man nun die Energien, so erhält man neben den quantisierten Energien des Potentialtopfs und dem Beitrag der Spin-Magnetfeld-Wechselwirkung auch einen Beitrag durch Energieniveaus eines harmonischen Oszillators mit Frequenz $\omega_C$. Letztere werden auch als \emph{Landau-Niveaus} bezeichnet. Der Füllfaktor
+lässt sich nun mit der Anzahl der besetzten Landau-Niveaus in Beziehung setzen. Man erhält dadurch letztlich
+$$
+\nu = \frac{n_eh}{Be}
+$$
+mit der Elektronenkonzentration $n_e$. Diese lässt sich also gemäß der Gleichung
+\begin{equation}\label{eq:ElektrKonz1}
+n_e = \frac{\nu Be}{h}
+\end{equation}
+aus einer Messung des Hall-Widerstands bestimmen, nachdem man die Plateaus den entsprechenden Füllfaktoren zugeordnet hat.
+Alternativ kann man $U_H$, resp. $R_H$ auch gegen den Kehrwert $1/B$ des Magnetfeldes auftragen und die Periode
+$\Delta$ bestimmen. $n_e$ ergibt sich dann gemäß
+\begin{equation}\label{eq:ElektrKonz2}
+n_e = \frac{2e}{h\Delta}.
+\end{equation}
+Für den klassischen Grenzfall $B\approx 0$ oder $T\gg0$ kann man (passend zu \eqref{eq:HallSpannung}-\eqref{eq:HallWiderstand}) auch
+\begin{equation}\label{eq:ElektrKonz3}
+n_e = \frac{1}{e}\left(\frac{\partial R_H}{\partial B}\right)^{-1}
+\end{equation}
+verwenden.
+
+\nocite{qhe}
+\nocite{wiki-fg}
+\nocite{wiki-he}
