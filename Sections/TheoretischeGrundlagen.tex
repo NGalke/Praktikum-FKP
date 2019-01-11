@@ -40,9 +40,13 @@ Praktisch kann ein 2DEG z.B. an Grenzflächen passender Heterostrukturen erzeugt
 
 \subsection{Quanten-Hall-Effekt}
 Führt man an einem 2DEG Versuche zum Hall-Effekt bei sehr niedrigen Temperaturen durch, so beobachtet man ein anderes Verhalten des Hall-Widerstands. Anstatt linear mit dem Magnetfeld anzuwachsen, bilden sich \emph{Hall-Plateaus} aus, die mit stärkerem Magnetfeld ausgeprägter werden. Beim Längswiderstand, also dem „realen“ Widerstand in Richtung des Stroms, kann man zudem die \emph{Shubnikov-de-Haas-Oszillationen} beobachten. Die Minima dieser Oszillation des Widerstands findet man bei denselben Feldstärken, wie die Hall-Plateaus. Für den Wert des Hall-Widerstands ergibt sich an diesen Stellen
-$$R_H = \frac{1}{\nu}R_K$$
+\begin{equation}\label{eq:HallvKl}
+R_H = \frac{1}{\nu}R_K
+\end{equation}
 wobei
-$$R_K := \frac{h}{e^2}$$
+\begin{equation}\label{eq:vKlitzing}
+R_K := \frac{h}{e^2}
+\end{equation}
 als \emph{von-Klitzing-Konstante} bezeichnet wird und $\nu$ der sogenannte \emph{Füllfaktor} ist. Dieser nimmt zunächst ganzzahlige Werte an, die bei wachsenden Magentfeldern kleiner werden. Bei sehr hohen Magentfeldern erhält man jedoch auch echt rationale Werte für $\nu$. Man unterscheidet entsprechend den \emph{integralen} und den \emph{fraktionalen Quanten-Hall-
 Effekt}.
 Dem Füllfaktor lässt sich noch eine andere Bedeutung geben, welche auch die Namensgebung begründet.
@@ -50,9 +54,9 @@ In einem äußeren Magnetfeld wird die Bewegung der Elektronen auch in der „fr
 $$\omega_C = \frac{eB}{m^*}$$
 wobei das Magnetfeld $\V B$ wieder als senkrecht zur Ebene angenommen wurde und $m^*$ die effektive Masse bezeichne. Berechnet man nun die Energien, so erhält man neben den quantisierten Energien des Potentialtopfs und dem Beitrag der Spin-Magnetfeld-Wechselwirkung auch einen Beitrag durch Energieniveaus eines harmonischen Oszillators mit Frequenz $\omega_C$. Letztere werden auch als \emph{Landau-Niveaus} bezeichnet. Der Füllfaktor
 lässt sich nun mit der Anzahl der besetzten Landau-Niveaus in Beziehung setzen. Man erhält dadurch letztlich
-$$
+\begin{equation}\label{eq:Fuellfaktor}
 \nu = \frac{n_eh}{Be}
-$$
+\end{equation}
 mit der Elektronenkonzentration $n_e$. Diese lässt sich also gemäß der Gleichung
 \begin{equation}\label{eq:ElektrKonz1}
 n_e = \frac{\nu Be}{h}
@@ -67,8 +71,12 @@ Für den klassischen Grenzfall $B\approx 0$ oder $T\gg0$ kann man (passend zu \e
 \begin{equation}\label{eq:ElektrKonz3}
 n_e = \frac{1}{e}\left(\frac{\partial R_H}{\partial B}\right)^{-1}
 \end{equation}
-verwenden.
-
+verwenden.\\
+Die Elektronenmobilität ergibt sich zu
+\begin{equation}\label{eq:Mobilitaet}
+\mu_e \propto \frac{1}{e n_eR_{xx}(0)},
+\end{equation}
+wobei der Proportionalitätsfaktor durch das Verhältnis aus Kontaktabstand und Breite der Hallgeometrie gegeben ist.
 \nocite{qhe}
 \nocite{wiki-fg}
 \nocite{wiki-he}
