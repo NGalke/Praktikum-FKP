@@ -1,5 +1,25 @@
 \section{Aufbau und Durchführung}
+Der erste Schritt bestand darin, das Programm zu schreiben, welches den Messvorgang steuert, also Magnetfeld hoch- und runterfährt, sowie Messwerte ausliest und in einer Datei speichert. Dazu wurde LabView verwendet.
 
-\subsection{Magnetotransportmessung}
+\subsection{Magnetotransportmessung}\label{sec:Magnetotransport}
+Bei diesen Messungen geht es darum, die Magnetotransporteigenschaften der Probe zu bestimmen.
+Der Magnetprobenstab, an dessen unteren Ende sich eine Spule befindet, wird in der Heliumkanne platziert.
+Die Probe (\emph{P07}, Bond-Schema siehe \autoref{fig:P07}) wird in den Probenstab eingesetzt und dieser wiederum in den Magnetprobenstab eingelassen.
+Vor der ersten Messung muss lange genug gewartet werden, sodass sich die eingebrachten Bauteile weit genug abgekühlt haben.\\
+Über ein Schaltbrett, das es erlaubt, auf die verschiedenen Kontakte der Hallgeometrie zuzugreifen, wird der Stab mit einer Stromquelle (\emph{Keithley 2400}) verbunden.
+Zum Aufbauen des Magnetfelds wird ein weiteres Netzteil benötigt.
+Mittels zweier \emph{Keithley 2000} werden Längs- und Querspannung gemessen.\\
+Dabei wird der Längsstrom von $10\ \si{\micro A}$ an zwei verschiedene Kontaktpaare angelegt.
+Für jedes Kontaktpaar werden die Spannungsmessgeräte wiederum mit jeweils zwei Kontaktpaaren verbunden, sodass vier Messreihen entstehen.
+In jeder Messreihe wird das Magnetfeld von $0\ \si{T}$ auf $4\ \si{T}$ hochgefahren (oder andersherum) und in geeigneten Abständen werden Längs- und Querspannung aufgenommen.
+Die Kontaktpaare sollen nach Möglichkeit verschieden sein, was jedoch aufgrund defekter Kontakte nicht immer uneingeschränkt möglich war.\\
+Aus den Messwerten werden dann Elektronenkonzentration und -beweglichkeit bestimmt.
 
 \subsection{Dauerhafter Photoeffekt}
+Bei sehr tiefen Temperaturen kann der durch den Photoeffekt erzeugte Strom auch nach Ausschalten der Beleuchtung noch gemessen können.
+Dies soll anhand dieser Messungen verifiziert werden.\\
+Der Aufbau der Messung ist zum größten Teil identisch zu dem in \autoref{sec:Magnetotransport} beschriebenen. Es wird jedoch eine andere Probe (\emph{P04}) verwendet, auf welcher eine LED angebracht wird.\\
+Bei diesen Messungen wird der Strom stets an dieselben Kontakte angelegt.
+Zunächst werden für zwei Kombinationen von Kontakten Messungen analog zu \autoref{sec:Magnetotransport} durchgeführt.
+Anschließend wird mit einem \emph{Keithley 2400} an die LED ein Strom von $8\ \si{mA}$ angelegt und die Probe für $60\ \si{s}$ beleuchtet.
+Dann wird die Messung wiederholt.
