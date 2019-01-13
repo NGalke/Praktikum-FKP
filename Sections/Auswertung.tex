@@ -4,98 +4,149 @@ Zunächst einige Worte zu den mit LabView aufgenommenen Messwerten: da die Abtas
 
 Zwischen diesen Werten mit konstantem Magnetfeld kann es in den gemessenen Spannungen / Widerständen natürlich zu Fluktuationen gekommen sein. Um einem Wert des Magnetfeld eindeutige Messwerte zuordnen zu können und zu verhindern, dass Messwerte doppelt auftreten (was zum Beispiel beim Fitten für eine ungerechtfertige Gewichtung gesorgt hätte), wurde daher über alle diese Werte gemittelt.
 
-\subsection{Der Magnetotransport}
-Die Vermessung des Magnetotransport wurde wie bereits in Abschnitt ? ausgeführt an Probe P07 und über 4 verschiedene Kontaktpaare für den Hallwiderstand / -spannung bzw. der für den Strom angelegten Spannung / dem dort beobachteten Widerstand durchgeführt. Aus diesen Werten lässt sich dann mit den in Abschnitt ? erläuterten Gl. ? auf drei unterschiedlichen Wegen die Elektronenkonzentration und die Ladungsträgermobilität bestimmen. 
+\subsection{Der Magnetotransport}\label{sec:Mag_trans}
+Die Vermessung des Magnetotransport wurde wie bereits in \autoref{sec:Magnetotransport} ausgeführt an Probe P07 und über 4 verschiedene Kontaktpaare für den Hallwiderstand / -spannung bzw. der für den Strom angelegten Spannung / dem dort beobachteten Widerstand durchgeführt. Aus diesen Werten lässt sich dann mit den in \autoref{sec:Quanten-Hall-Effekt} erläuterten Gleichungen auf drei unterschiedlichen Wegen die Elektronenkonzentration und die Ladungsträgermobilität bestimmen. 
 
-Während jede dieser Methoden auf alle 4 Messreihen angewendet wurden, werden im Folgenden nur Darstellungen für eine der Messreihen repräsentativ angeführt. Die Vorgehensweisen lassen sich auf die Übrigen Reihen ohne nennenswerten Anpassungen übertragen - auf Unterschiede wird eingegangen. Die so bestimmten Größen werden für alle Messreihen angegeben und (vergleiched) diskutiert.
+Während jede dieser Methoden auf alle 4 Messreihen angewendet wurden, werden im Folgenden nur Darstellungen für eine repräsentativ angeführt. Die Vorgehensweisen lassen sich auf die Übrigen Reihen ohne nennenswerten Anpassungen übertragen - auf Unterschiede wird eingegangen. Die so bestimmten Größen werden für alle Messreihen angegeben und (vergleiched) diskutiert.
 
 \subsubsection{Methode 1: Bestimmung der Hallplateaus}
-Nach Gl. ?? lässt sich aus der Lage der Hallplateaus sowie den entsprechenden Füllfaktoren die Elektronenkonzentration berechnet werden. Dafür muss nach Gl. ?? der Füllfaktor bestimmt werden - wir benötigen daher zusätzlich die zu den Plateaus korrespondierenden Hallwiderstände.  Betrachten wir daher die repräsentative Darstellung einer Messreihe in Abb. \ref{abb:P07_Meth_1}:
+Nach Gl. \ref{eq:ElektrKonz1} lässt sich aus der Lage der Hallplateaus sowie den entsprechenden Füllfaktoren die Elektronenkonzentration berechnet werden. Dafür muss nach Gl. \ref{eq:Fuellfaktor} der Füllfaktor bestimmt werden - wir benötigen daher zusätzlich die zu den Plateaus korrespondierenden Hallwiderstände.  Betrachten wir daher die repräsentative Darstellung einer Messreihe in Abb. \ref{abb:P07_Meth_1}:
 
-Man erkennt sehr gut die SdH-Oszillation sowie zwei klare Hallplateaus für Magnetfelder mit $B>\SI{2}{\tesla}$. Auch für schwächere Magnetfelder lassen sich Hallplateaus ausmachen - allerdings deutlich weniger sicher. Für Magnetfelder $B<\SI{1}{\tesla}$ lassen sich keine Plateaus mehr erkennen. Die SdH-Oszillationen sind hingegen über einen deutlich größeren Wertebereich klar und mit eindeutigen Minima versehen. Wir haben uns daher entschieden, die zu Plataeus korrespondierenden Magnetfeldstärken (und damit dazu gehörige Hallwiderstände) aus den Minima der Oszillation zu bestimmen.
+Man erkennt sehr gut die SdH-Oszillation sowie zwei klare Hallplateaus für Magnetfelder mit $B>\SI{2}{\tesla}$. Auch für schwächere Magnetfelder lassen sich Hallplateaus ausmachen - allerdings deutlich weniger sicher. Für Magnetfelder $B<\SI{1}{\tesla}$ lassen sich keine Plateaus mehr erkennen. Die SdH-Oszillationen sind hingegen über einen deutlich größeren Wertebereich klar und ist mit eindeutigen Minima versehen. Wir haben uns daher entschieden, die zu Plataeus korrespondierenden Magnetfeldstärken (und damit dazu gehörige Hallwiderstände) aus den Minima der Oszillation zu bestimmen.
 
 \begin{figure}[h!]
 	\centering
-	\input{../results_meth_1/P07_0611_0708_0109.pgf}
-	\caption{Messung von Längswiderstand und Hallwiderstand in Abhängigkeit des Magnetfelds für Probe P07 für die Kontaktpaare.... Markiert sind Hallplateaus mit korrespondierenden Minima der SdH-Oszillation und den jeweiligen Füllfaktoren}
+	\input{results_meth_1/P07_0611_0708_0109.pgf}
+	\caption{Messung von Längswiderstand und Hallwiderstand in Abhängigkeit des Magnetfelds für Messreihe P07\_1\_A Markiert sind Hallplateaus mit korrespondierenden Minima der SdH-Oszillation und den jeweiligen Füllfaktoren}
 	\label{abb:P07_Meth_1}
 \end{figure}
 
 Wir konnten so in jeder Messreihe für die Füllfaktoren $\nu = 6$, $\nu = 8$ und noch $\nu = 10 $ (relativ) klare Plateaus messen. Für die Faktoren $\nu = 12, 14, 16, 18$ lassen sich der SdH-Oszillation noch angedeutete Plateaus zuordnen. Diesen Bereich ordnen wir daher dem quantenmechanischen Regime zu und nutzen ihn für diese sowie für die in Abschnitt \ref{subsubsec:Meth_2} beschriebene Methode. \\
 \\
-Für jedes identifizierte Hallplateau berechnen wir nun die Elektronendichte nach Gl. ?\footnote{Die Werte für die Elementarladung und das Plank'sche Wirkungsquantum wurden dem Python-Package Scipy.constants entnommen.}. Die Werte sind für ..... exemplarisch in Tab. \ref{tab:P07_Meth_1} zu finden. 
-$$ n_e = \frac{\nu B(\nu) e}{h}$$
-Da die Elektronenkonzentration unabhängig vom Magnetfeld ist, mitteln wir über jedes berücksichtigte Plateau und erhalten Tabelle \ref{tab:Meth_1}. Die Std-Abweichung berschreibt die Abweichung innerhalb der Messreihe für jedes Plateau. \\ 
+Für jedes identifizierte Hallplateau berechnen wir nun die Elektronendichte nach Gl. \ref{eq:ElektrKonz1} \footnote{Die Werte für die Elementarladung und das Plank'sche Wirkungsquantum wurden dem Python-Package Scipy.constants entnommen.}. Die Werte sind für ..... exemplarisch in Tab. \ref{tab:P07_Meth_1} zu finden. \\
+\\
+Da die Elektronenkonzentration unabhängig vom Magnetfeld ist, mitteln wir über jedes berücksichtigte Plateau und erhalten Tabelle \ref{tab:Meth_1}. \\ 
 
 Die bestimmten Elektronenkonzentrationen liegen ausgesprochen nah beieinander, es gibt allerdings kleine Abweichungen, die nicht von der Standartabweichung in den einzelnen Messreihen erklärt wird. Auffällig ist, das bei beiden Messungen, bei denen der Längswiderstand zwischen direkt nebeneinander liegenden Kontakten gemessen wurde, eine leicht höhere Elektronenkonzentration festzustellen ist. Insgesamt erscheinen die Abweichungen aber insignifikant. \\
 
-Die Elektronenmobilität lässt sich nun (und auch bei den anderen Ansätzen) mit Gl. ? aus der E-Konzentration und dem spezifischen Widerstand der Hallgeometrie berechnen. Dabei ist zu beachten, das bei den Messungen [....] mit einem Abstand von zwei Kontakten gemessen wurde. Der spezifische Widerstand ist hier also doppelt so groß. Die Ergebnisse sind ebenfalls Tabelle \ref{tab:Meth_1} zu entnehmen. Im Gegensatz zur E-Konzentration beobachten wir hier sig. Schwankungen. Da diese Schwankungen bei allen Ansätzen gleichermaßen auftreten, diskutieren wir sie in Abschnitt ? zusammenfassend.
+Die Elektronenmobilität lässt sich nun (und auch bei den anderen Ansätzen) mit Gl. \ref{eq:Mobilitaet} aus der E-Konzentration und dem spezifischen Widerstand der Hallgeometrie berechnen. Dabei ist zu beachten, das bei den Messungen [....] mit einem Abstand von zwei Kontakten gemessen wurde. Der spezifische Widerstand ist hier also doppelt so groß. Die Ergebnisse sind ebenfalls Tabelle \ref{tab:Meth_1} zu entnehmen. Im Gegensatz zur E-Konzentration beobachten wir hier sig. Schwankungen. Da diese Schwankungen bei allen Ansätzen gleichermaßen auftreten, diskutieren wir sie in Abschnitt \ref{sec:Schwankungen} zusammenfassend.
 
 \begin{table}
 	\centering
-	\caption{}
-	\input{../results_meth_1/P07_0611_0708_0109.tex}
+	\caption{Bei Messreihe P07\_1\_A beobachtete Hallplateaus mit allen relevanten Größen}
+	\input{results_meth_1/P07_0611_0708_0109.tex}
 	\label{tab:P07_Meth_1}
 \end{table}
 \begin{table}
 	\centering
-	\caption{}
-	\input{../results_meth_1/Method_1.tex}
+	\caption{Die mit Methode 1 bestimmten E-konzentrationen und -mobilitäten}
+	\input{results_meth_1/Method_1.tex}
 	\label{tab:Meth_1}
 \end{table}
 
 \newpage
 \subsubsection{Methode 2: Bestimmung der reziproken Periode der SdH-Oszillation} \label{subsubsec:Meth_2}
-Die Elektronenkonzentration lässt sich auch mit Gl. ?? aus der reziproken Periode der SdH-Oszillation berechnen. Dies ist besonders dann interessant, wenn sich den Hallplateaus keine eindeutigen Hallwiderstände mehr zuordnen lassen (was hier auf Füllfaktoren $\nu > 10$ zunehmend zutrifft.
+Die Elektronenkonzentration lässt sich auch mit Gl. \ref{eq:ElektrKonz2} aus der reziproken Periode der SdH-Oszillation berechnen. Dies ist besonders dann interessant, wenn sich den Hallplateaus keine eindeutigen Hallwiderstände mehr zuordnen lassen (was hier auf Füllfaktoren $\nu > 10$ zunehmend zutrifft).
 
-Die rez. Abstände der schon bei Methode 1 genutzten Minima und die aus diesen berechnete Elektronenkonzentration wurden wie schon bei Methode 1 gemittelt und aus dem Mittelwert die Elektronenmobilität bestimmt. Diese Größen sind den Tabellen \ref{tab:P07_Meth_2} (repräsentativ für alle Messreihen) und Tab. \ref{tab:Meth_2} zu finden. 
+Die rez. Abstände der schon bei Methode 1 genutzten Minima und die aus diesen berechnete Elektronenkonzentration wurden wie schon bei Methode 1 gemittelt und aus dem Mittelwert die Elektronenmobilität bestimmt. Diese Größen sind in den Tabellen \ref{tab:P07_Meth_2} (repräsentativ) und Tab. \ref{tab:Meth_2} zu finden. 
 
-Die beobachtete Elektronenkonzentration / -mobilität liegen mit dieser Methode noch etwas näher beieinander als zuvor, allerdings sind die Standartabweichungen größer geworden. Da die Werte auch mit denen aus Methode 1 in sehr guter Näherung übereinstimmen erhalten wir gleichermaßen unterschiedliche Werte für die Elektronenmobilität.
+Die beobachtete Elektronenkonzentration / -mobilität liegen mit dieser Methode noch etwas näher beieinander als zuvor, allerdings sind die Standartabweichungen leicht größer geworden. Die zuvor beobachtete leicht höhere E-Konzentration bei den Messungen P07\_1\_A und P07\_2\_A ist in den Werten nicht länger erkennbar. Da sie dennoch mit denen aus Methode 1 in sehr guter Näherung übereinstimmen, erhalten wir gleichermaßen unterschiedliche Werte für die Elektronenmobilität.
  
 \begin{figure}[htbp]
 	\centering
-	\input{../results_meth_2/P07_0611_0708_0109.pgf}
-	\caption{}
+	\input{results_meth_2/P07_0611_0708_0109.pgf}
+	\caption{Der Längswiderstand der Messreihe aufgetragen gegen $1/B$. Markiert sind die für die Berechnung der Elektronenkonzentration herangezogenen Perioden.}
 	\label{abb:P07_Meth_2}
 \end{figure}
 
 \begin{table}[h!]
 	\centering
-	\caption{}
-	\input{../results_meth_2/P07_0611_0708_0109.tex}
+	\caption{Bei Messreihe P07\_1\_A betrachtete Minima der SdH-Oszillation}
+	\input{results_meth_2/P07_0611_0708_0109.tex}
 	\label{tab:P07_Meth_2}
 \end{table}
 
 \begin{table}[h!]
 	\centering
-	\caption{}
-	\input{../results_meth_2/Method_2.tex}
+	\caption{Die mit Methode 2 bestimmten E-konzentrationen und -mobilitäten}
+	\input{results_meth_2/Method_2.tex}
 	\label{tab:Meth_2}
 \end{table}
 \newpage
 \subsubsection{Methode 3:}
 Für die letzte Herangehensweise betrachten wir das klassische Regime des Hall-Effekts - also niedrige Magnetfelder. Als Grenze wählen wir dafür das niedrigste Hallplateau, dass wir identifizieren konnten.
 
-Im klassischen Bereich lässt sich mit Gl. ? aus der Steigung des Hallwiderstands die Elektronendichte bestimmen. Diese Steigung erhalten wir mittels eines linearen Fits (s. Abb. \ref{abb:P07_Meth_3}). Hier ist bereits gut zu erkennen, dass eine Extrapolation dieses Fits gerade die Hallplateaus schneidet. Die Elektronenkonzentration und -mobilität sind Tab. \ref{tab:Meth_3} zu entnehmen. Die Werte stimmen wiederum in guter Näherung mit den zuvor ermittelten überein. Auch das Bild der stark schwankenden Mobilität zeigt sich.
+Im klassischen Bereich lässt sich mit Gl. \ref{eq:ElektrKonz3} aus der Steigung des Hallwiderstands die Elektronendichte bestimmen. Diese Steigung erhalten wir mittels eines linearen Fits (s. Abb. \ref{abb:P07_Meth_3}). Hier ist bereits gut zu erkennen, dass eine Extrapolation dieses Fits gerade die Hallplateaus schneidet. Die Elektronenkonzentration und -mobilität sind Tab. \ref{tab:Meth_3} zu entnehmen. Die Werte stimmen wiederum in guter Näherung mit den zuvor ermittelten überein. Auch das Bild der stark schwankenden Mobilität zeigt sich.
 \begin{figure}[htbp]
 	\centering
-	\input{../results_meth_3/P07_0611_0708_0109.pgf}
-	\caption{}
+	\input{results_meth_3/P07_0611_0708_0109.pgf}
+	\caption{Der Hallwiderstand von Messreihe P07\_1\_A  als Funktion des Magnetfelds mit linearem Fit. }
 	\label{abb:P07_Meth_3}
 \end{figure}
 
 \begin{table}[h]
 	\centering
-	\caption{}
-	\input{../results_meth_3/Method_3.tex}
+	\caption{Die mit Methode 3 bestimmten E-konzentrationen und -mobilitäten}
+	\input{results_meth_3/Method_3.tex}
 	\label{tab:Meth_3}
 \end{table}
 
-\subsubsection{Schwankungen in der Elektronenmobiltität}
+\subsubsection{Schwankungen in der Elektronenmobiltität} \label{sec:Schwankungen}
 Da wir für alle Methoden in guter Näherung die gleiche Elektronenkonzentration bestimmen konnten sind die bestimmten Mobilitäten weitesgehend unabhängig von der Berechnungsmethodik. Es liegt damit nahe, dass es sich nicht um lokale Messfehler o.Ä. handelt sondern um tatsächliche Unterschiede im Messaufbau / Ablauf. 
 
 Die Elektronenmobilität hängt nur vom spezifischen Widerstand (und damit dem Längswiderstand bei $ B = 0 $) und der E-Dichte ab. Weil letztere aber für alle Werte näherungsweise konstant ist, müssen die Schwankungen aus Unterschieden im Längswiderstand stammen. Dafür sind mehrere Ursachen möglich. 
 
 Auffällig ist, dass die erste Messreihe einen besonders signifikanten Ausreißer darstellt. Die dritte und vierte Messreihe liegen sehr nah beieinander, die zweite dazwischen. Wir halten daher den Einfluss von Magnetisierungseffekten für möglich: da die Hallgeometrie vor der ersten Messung keinem Magnetfeld ausgesetzt war (bzw. sich längere Zeit bei Zimmertemperatur befand) ist dies eine mögliche Erklärung für die Unterschiede zur dritten und vierten Messung. 
 
-Eine weitere mögliche Erklärung wären Defekte in der Geometrie selbst. Wie bereits in Abschnitt ?? ausgeführt wirkte diese abgenutzt. Da Elektronen beim Ladungstransport an Störstellen gestreut werden, wären Defekte in der Lage, die Driftgeschwindigkeit und damit die Ladungsträgermobilität zu reduzieren. 
+Eine weitere mögliche Erklärung wären Defekte in der Geometrie selbst. Wie bereits in \autoref{sec:Magnetotransport} ausgeführt, wirkte diese abgenutzt. Da Elektronen beim Ladungstransport an Störstellen gestreut werden, wären Defekte in der Lage, die Driftgeschwindigkeit und damit die Ladungsträgermobilität zu beeinflussen. 
+
+\clearpage
+\subsection{Der dauerhafte Photoeffekt}
+
+Beleuchtet man eine Hallgeometrie bei Temperaturen $T < \SI{70}{\kelvin}$ mit E-M-Strahlung, regt man mittels des Photoeffekts Elektronen aus dem Halbleitermaterial dauerhaft in das 2DEG an - und erwartet somit eine gestiegene Elektronenkonzentration im Vergleich zum zuvor unbeleuchteten Zustand. Dies hat einige Effekte auf das Verhalten von Hallwiderstand und Längswiderstand im externen Magnetfeld. Wie in \autoref{sec:Photoeffekt} ausgeführt ist, wurde dieses Experiment an  Probe P04 für zwei unterschiedliche Kontaktkonfigurationen durchgeführt. Für die unbeleuchteten Messreihen lassen sich Elektronenkonzentration und -mobilität vollständig analog zu \autoref{sec:Mag_trans} bestimmen. Auf die Vorgehensweise wird hier daher nicht weiter eingegangen. \\
+
+Für die beleuchteten Fälle gestaltet sich die Auswertung schwieriger. Betrachten wir Abb. \ref{abb:P04_Compare}: Es ist sofort zu erkennen, dass wir für den Längswiderstand ein grundlegend anderes Bild beobachten als im unbeleuchteten Fall: Anstelle der SdH-Oszillation dominiert nun eine überproportionale Abhängigkeit vom Magnetfeld den Verlauf. Dadurch korrespondieren die lokalen Minima des Graph nicht länger zu den lokalen Minima der noch erkennbaren Oszillation, wodurch sich auf diesem Wege nicht identifizieren lässt, für welche Magnetfelder sich Hallplateaus einstellen. Darüber hinaus nimmt der Längswiderstand deutlich höhere Werte an.
+
+\begin{figure}[h!]
+	\centering
+	\input{Zweiter_teil/results_meth_1/P04_0708_1907_Light_OFF_compare.pgf}
+	\caption{text}
+	\label{abb:P04_Compare}
+\end{figure}
+Gleichzeitig ist eine exakte Bestimmung der Lage der Hallplateaus aus dem Verlauf der Hallspannung selbst kaum möglich, teilweise aus den gleichen Gründen wie schon in Abschnitt \ref{sec:Mag_trans}, aber auch, weil bei erkennbaren Plateaus die Konstanz weniger gut gegeben ist. Im Gegensatz zum Längswiderstand erreicht der Hallwiderstand nur niedrigere Werte. Da nach Gl. \ref{eq:Fuellfaktor} der Füllfaktor vom Hallwiderstand antiproportional abhängt hätten erkennbare Hallplateaus hier höhrere Faktoren.
+ 
+Aus diesen Gründen wird auf eine Bestimmung von E-Konzentration und -mobilität nach Methode 1 hier verzichtet. Eine Erklärung dieser Beobachtung wird im Verlauf dieses Abschnitts erfolgen. \\
+\\
+Eine Anwendung der übrigen Methoden ist allerdings weiterhin möglich (s. Abb. \ref{abb:P04_Meth_2} und \ref{abb:P04_Meth_3}). \\ 
+\\
+Für Konzentration und Mobilität erhalten wir die in Tab \ref{tab:Photo} dargestellten Messwerte. \\
+\\
+
+\begin{figure}[h!]
+	\centering
+	\input{Zweiter_teil/results_meth_2/P04_0708_1907_Light_ON.pgf}
+	\caption{}
+	\label{abb:P04_Meth_2}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\input{Zweiter_teil/results_meth_3/P04_0708_1907_Light_ON.pgf}
+	\caption{}
+	\label{abb:P04_Meth_3}
+\end{figure}
+
+\begin{table}[h!]
+	\centering
+	\caption{}
+	\input{Zweiter_teil/results.tex}
+	\label{tab:Photo}
+\end{table}
+Bei den Messreihen mit dauerhaftem Photoeffekt beobachten wir wie erwartet eine (ca. $1.5x$) höhere Elektronenkonzentration, das Auftreten eines dauerhaften Photoeffekts können wir daher experimentell bestätigen. Wir beobachten allerdings auch einen vergleichsweise großen Unterschied zwischen den Berechnungsmethoden. Da die Probleme, die interessanten Punkte im quantenmechanischen Regime zu verordnen auf das klassische nicht zutreffen, weisen wir den mit Methode 3 bestimmten Werten eine höhere Verlässlichkeit zu. 
+
+Überraschend ist hingegen die deutlich höhere Elektronenmobilität bei Messreihen mit dauerhaftem Photoeffekt. 
+
+\subsubsection{Eklärungsversuche}
+
+
+
