@@ -23,7 +23,7 @@ Man erkennt sehr gut die SdH-Oszillation sowie zwei klare Hallplateaus für Magn
 
 Wir konnten so in jeder Messreihe für die Füllfaktoren $\nu = 6$, $\nu = 8$ und noch $\nu = 10 $ (relativ) klare Plateaus messen. Für die Faktoren $\nu = 12, 14, 16, 18$ lassen sich der SdH-Oszillation noch angedeutete Plateaus zuordnen. Diesen Bereich ordnen wir daher dem quantenmechanischen Regime zu und nutzen ihn für diese sowie für die in Abschnitt \ref{subsubsec:Meth_2} beschriebene Methode. \\
 \\
-Für jedes identifizierte Hallplateau berechnen wir nun die Elektronendichte nach Gl. \ref{eq:ElektrKonz1} \footnote{Die Werte für die Elementarladung und das Plank'sche Wirkungsquantum wurden dem Python-Package Scipy.constants entnommen.}. Die Werte sind für ..... exemplarisch in Tab. \ref{tab:P07_Meth_1} zu finden. \\
+Für jedes identifizierte Hallplateau berechnen wir nun die Elektronendichte nach Gl. \ref{eq:ElektrKonz1} \footnote{Die Werte für die Elementarladung und das Plank'sche Wirkungsquantum wurden dem Python-Package Scipy.constants entnommen.}. Die Werte sind für Messreihe P07\_1\_A exemplarisch in Tab. \ref{tab:P07_Meth_1} zu finden. \\
 \\
 Da die Elektronenkonzentration unabhängig vom Magnetfeld ist, mitteln wir über jedes berücksichtigte Plateau und erhalten Tabelle \ref{tab:Meth_1}. \\ 
 
@@ -55,7 +55,7 @@ Die beobachtete Elektronenkonzentration / -mobilität liegen mit dieser Methode 
 \begin{figure}[htbp]
 	\centering
 	\input{results_meth_2/P07_0611_0708_0109.pgf}
-	\caption{Der Längswiderstand der Messreihe aufgetragen gegen $1/B$. Markiert sind die für die Berechnung der Elektronenkonzentration herangezogenen Perioden.}
+	\caption{Der Längswiderstand der Messreihe P07\_1\_A aufgetragen gegen $1/B$. Markiert sind die für die Berechnung der Elektronenkonzentration herangezogenen Perioden.}
 	\label{abb:P07_Meth_2}
 \end{figure}
 
@@ -73,7 +73,7 @@ Die beobachtete Elektronenkonzentration / -mobilität liegen mit dieser Methode 
 	\label{tab:Meth_2}
 \end{table}
 \newpage
-\subsubsection{Methode 3:}
+\subsubsection{Methode 3: Bestimmung der Konzentration im klassischen Regime}
 Für die letzte Herangehensweise betrachten wir das klassische Regime des Hall-Effekts - also niedrige Magnetfelder. Als Grenze wählen wir dafür das niedrigste Hallplateau, dass wir identifizieren konnten.
 
 Im klassischen Bereich lässt sich mit Gl. \ref{eq:ElektrKonz3} aus der Steigung des Hallwiderstands die Elektronendichte bestimmen. Diese Steigung erhalten wir mittels eines linearen Fits (s. Abb. \ref{abb:P07_Meth_3}). Hier ist bereits gut zu erkennen, dass eine Extrapolation dieses Fits gerade die Hallplateaus schneidet. Die Elektronenkonzentration und -mobilität sind Tab. \ref{tab:Meth_3} zu entnehmen. Die Werte stimmen wiederum in guter Näherung mit den zuvor ermittelten überein. Auch das Bild der stark schwankenden Mobilität zeigt sich.
@@ -110,7 +110,7 @@ Für die beleuchteten Fälle gestaltet sich die Auswertung schwieriger. Betracht
 \begin{figure}[h!]
 	\centering
 	\input{Zweiter_teil/results_meth_1/P04_0708_1907_Light_OFF_compare.pgf}
-	\caption{text}
+	\caption{Hallwiderstand und Längswiderstand für die beleuchtete und unbeleuchte Messreihe P04\_1.}
 	\label{abb:P04_Compare}
 \end{figure}
 Gleichzeitig ist eine exakte Bestimmung der Lage der Hallplateaus aus dem Verlauf der Hallspannung selbst kaum möglich, teilweise aus den gleichen Gründen wie schon in Abschnitt \ref{sec:Mag_trans}, aber auch, weil bei erkennbaren Plateaus die Konstanz weniger gut gegeben ist. Im Gegensatz zum Längswiderstand erreicht der Hallwiderstand nur niedrigere Werte. Da nach Gl. \ref{eq:Fuellfaktor} der Füllfaktor vom Hallwiderstand antiproportional abhängt hätten erkennbare Hallplateaus hier höhrere Faktoren.
