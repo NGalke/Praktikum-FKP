@@ -6,20 +6,33 @@
 \usepackage{amsmath, amssymb}
 \usepackage{siunitx}
 \usepackage{graphicx}
+\usepackage{wrapfig}
 \usepackage[colorlinks, allcolors=black, urlcolor=blue]{hyperref}
-\usepackage{todonotes}
+%\usepackage{todonotes}
 \usepackage[style=alphabetic]{biblatex}
 \usepackage{pgf}
 \usepackage{booktabs}
 \usepackage[font=small, labelfont=bf]{caption}
+\usepackage{setspace}
 
 \addbibresource{bibliography.bib}
 
+\title{Integraler Quanten-Hall-Effekt}
+\author{N. Galke \and M. J. Martins}
+\date{}
+
 \begin{document}
-	\tableofcontents
+	\input{Sections/Deckblatt}
 
 	\input{Sections/TheoretischeGrundlagen}
+	\clearpage
 	\input{Sections/AufbauUndDurchfuehrung}
-    \input{Sections/Auswertung}
+	\clearpage
+
+    	\input{Sections/Auswertung}
+
+	\input{Sections/Resume}
+	\clearpage
+
 	\printbibliography[heading=bibintoc]
 \end{document}

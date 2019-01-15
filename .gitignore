@@ -7,6 +7,5 @@
 *.run.xml
 *.toc
 *.pdf
-=======
+*.gz
 BACKUP/
->>>>>>> Stashed changes

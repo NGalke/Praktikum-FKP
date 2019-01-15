@@ -27,25 +27,29 @@ R_H = \frac{U_H}{I}
 betrachten, welcher zwar die Dimension eines Widerstands hat, jedoch nicht direkt mit einem „realen“ Widerstand identifiziert werden kann.\\
 Gemessen werden jedoch stets $U_H$ und $I$.
 
+\clearpage
+
 \subsection{Zweidimensionales Elektronengas}
 Um den \emph{Quanten-Hall-Effekt} beschreiben zu können, benötigt man das Modell des \emph{(2-dimensionalen) Elektronengases}\footnote{kurz: (2D)EG}.
 Das EG ist ein Spezialfall des \emph{(idealen) Fermi-Gases}. Das ideale Fermi-Gas beschreibt passende Systeme durch ein Ensemble von nicht miteinander wechselwirkenden Fermionen in einem Potentialtopf, analog zum idealen Gas.
 Angewandt auf die Elektronen im Festkörper bedeutet das also, dass neben den Wechselwirkungen der Elektronen miteinander auch das periodische Kristallpotential nicht wirklich berücksichtigt wird.\\
 
-Dies kann aber zumindest teilweise durch das \emph{Bloch-Theorem} gerechtfertigt werden:\\
-In einem periodischen Potential (endlicher Ausdehnung) erhält man eine Basis des Lösungsraumes bestehend aus Funktionen
+Dies kann (zumindest teilweise) durch das \emph{Bloch-Theorem} gerechtfertigt werden:\\
+In einem periodischen Potential (endlicher Ausdehnung) erhält man eine Basis des Lösungsraumes der stationären Schrödingergleichung bestehend aus Funktionen
 $$\Psi_{\V k}(\V r) = u_{\V k}(\V r) e^{i\V k\cdot\V r},$$
 wobei $\V k$ aus der ersten Brioullin-Zone stammt\footnote{Durch die Annahme endlicher Ausdehnung sind hier nur endlich viele $\V k$ möglich} und jedes $u_{\V k}$ dieselbe Periodizität wie das Potential hat.
-Das periodische Potential der Kerne äußert sich also nur in einer Modulation\footnote{Störstellen können dieses Verhalten jedoch ändern} (\cite{czy15}, \cite{gro18}).\\
+Das periodische Potential der Kerne äußert sich also in einer Modulation der ebenen Wellen, welche man bei freien Elektronen erwarten würde.\footnote{Störstellen können dieses Verhalten ändern} (\cite{czy15}, \cite{gro18}).\\
 
-Speziell beim 2DEG nimmt man das Potential in einer Raumrichtung als Potentialtopf an. Für diese Richtung ergeben sich, wie für einen Potentialtopf üblich, (endlich viele) diskrete Energieniveaus. Die Menge der Lösungen der (stationären) eindimensionalen Schrödinger-Gleichung zu je einem dieser Energieeigenwerte bezeichnet man als \emph{Subband}.
+Speziell beim 2DEG nimmt man das Potential in \emph{einer} Raumrichtung als Potentialtopf an. Für diese Richtung ergeben sich, wie für einen Potentialtopf üblich, (endlich viele) diskrete Energieniveaus. Die Menge der Lösungen der (stationären) eindimensionalen Schrödinger-Gleichung zu je einem dieser Energieeigenwerte bezeichnet man als \emph{Subband}.
 In den anderen beiden Richtungen kann die Bewegung ungehindert ablaufen, wird also durch den Hamilton-Operator eines zweidimensionalen freien Teilchens beschrieben, jedoch mit einer effektiven Masse anstatt der üblichen Elektronenmasse.
 Praktisch kann ein 2DEG z.B. an Grenzflächen passender Heterostrukturen erzeugt werden.
+
+\clearpage
 
 \subsection{Quanten-Hall-Effekt}\label{sec:Quanten-Hall-Effekt}
 Führt man an einem 2DEG Versuche zum Hall-Effekt bei sehr niedrigen Temperaturen durch, so beobachtet man ein anderes Verhalten des Hall-Widerstands. Anstatt linear mit dem Magnetfeld anzuwachsen, bilden sich \emph{Hall-Plateaus} aus, die mit stärkerem Magnetfeld ausgeprägter werden. Beim Längswiderstand, also dem „realen“ Widerstand in Richtung des Stroms, kann man zudem die \emph{Shubnikov-de-Haas-Oszillationen} beobachten. Die Minima dieser Oszillation des Widerstands findet man bei denselben Feldstärken, wie die Hall-Plateaus. Für den Wert des Hall-Widerstands ergibt sich an diesen Stellen
 \begin{equation}\label{eq:HallvKl}
-R_H = \frac{1}{\nu}R_K
+R_H = \frac{1}{\nu}R_K,
 \end{equation}
 wobei
 \begin{equation}\label{eq:vKlitzing}
