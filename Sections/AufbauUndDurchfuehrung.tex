@@ -23,10 +23,24 @@ Dabei wird der Längsstrom von $10\ \si{\micro A}$ an zwei verschiedene Kontaktp
 Für jedes Kontaktpaar werden die Spannungsmessgeräte wiederum mit jeweils zwei Kontaktpaaren verbunden, sodass vier Messreihen entstehen.
 In jeder Messreihe wird das Magnetfeld von $0\ \si{T}$ auf $4\ \si{T}$ hochgefahren (oder andersherum) und in geeigneten Abständen werden Längs- und Querspannung aufgenommen.
 Die Kontaktpaare sollen nach Möglichkeit verschieden sein, was jedoch aufgrund defekter Kontakte nicht immer uneingeschränkt möglich war.\\
-Aus den Messwerten werden dann Elektronenkonzentration und -beweglichkeit bestimmt.
+Aus den Messwerten werden dann Elektronenkonzentration und -beweglichkeit bestimmt.\\\\
+Die verwendeten Paarungen (inklusive den in \autoref{sec:Auswertung} verwendeten Bezeichnungen der Messreihen) sind in \autoref{tab:PairsP07} zu finden.\\
 
-\clearpage
-
+\begin{table}[ht]
+\caption{Für die Messungen zum Magnetotransport verwendete Kontaktpaarungen}
+\label{tab:PairsP07}
+\centering
+\begin{tabular}{cccc}
+\toprule
+Bezeichnung & Strom & Längswiderstand & Hallwiderstand\\
+\midrule
+P07\_1\_A & $6\rightarrow 11$ & $7\rightarrow 8$ & $1\rightarrow 9$\\
+P07\_1\_B & $6\rightarrow 11$ & $7\rightarrow 9$ & $1\rightarrow 9$\\
+P07\_2\_A & $11\rightarrow 15$ & $12\rightarrow 13$ & $20\rightarrow 12$\\
+P07\_2\_B & $11\rightarrow 15$ & $20\rightarrow 18$ & $19\rightarrow 13$\\
+\bottomrule
+\end{tabular}
+\end{table}
 \subsection{Dauerhafter Photoeffekt}\label{sec:Photoeffekt}
 Bei sehr tiefen Temperaturen kann der durch den Photoeffekt erzeugte Strom auch nach Ausschalten der Beleuchtung noch gemessen können.
 Dies soll anhand dieser Messungen verifiziert werden.
@@ -40,7 +54,21 @@ Dies soll anhand dieser Messungen verifiziert werden.
 Der Aufbau der Messung ist zum größten Teil identisch zu dem in \autoref{sec:Magnetotransport} beschriebenen. Es wird jedoch eine andere Probe (\emph{P04}, Bond-Schema siehe \autoref{fig:P04}) verwendet, auf welcher außerdem eine LED angebracht wird.
 
 Bei diesen Messungen wird der Strom stets an dieselben Kontakte angelegt.
-Zunächst werden für zwei Kombinationen von Kontakten Messungen analog zu \autoref{sec:Magnetotransport} durchgeführt.
+Zunächst werden für zwei Kombinationen von Kontakten Messungen analog zu \autoref{sec:Magnetotransport} durchgeführt. Die verwendeten Paarungen sind \autoref{tab:PairsP04} zu entnehmen.\\
 Anschließend wird mit einem \emph{Keithley 2400} an die LED ein Strom von $8\ \si{mA}$ angelegt und die Probe für $60$ Sekunden beleuchtet.
 Nach einer Wartezeit von zehn Minuten wird die Messung wiederholt.\\
 Elektronenkonzentration und -beweglichkeit werden berechnet und verglichen.
+
+\begin{table}[ht]
+\caption{Für die Messungen zum Magnetotransport verwendete Kontaktpaarungen}
+\label{tab:PairsP04}
+\centering
+\begin{tabular}{cccc}
+\toprule
+Bezeichnung & Strom & Längswiderstand & Hallwiderstand\\
+\midrule
+P04\_1 & $3\rightarrow 13$ & $7\rightarrow 8$ & $19\rightarrow 7$\\
+P04\_2 & $3\rightarrow 13$ & $19\rightarrow 17$ & $17\rightarrow 9$\\
+\bottomrule
+\end{tabular}
+\end{table}
