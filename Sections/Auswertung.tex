@@ -26,11 +26,11 @@ Wir konnten so in jeder Messreihe für die Füllfaktoren $\nu = 6$, $\nu = 8$ un
 \\
 Für jedes identifizierte Hallplateau berechnen wir nun die Elektronendichte nach Gl. \ref{eq:ElektrKonz1} \footnote{Die Werte für die Elementarladung und das Plank'sche Wirkungsquantum wurden dem Python-Package Scipy.constants entnommen.}. Die Werte sind für Messreihe P07\_1\_A exemplarisch in Tab. \ref{tab:P07_Meth_1} zu finden. \\
 \\
-Da die Elektronenkonzentration unabhängig vom Magnetfeld ist, mitteln wir über jedes berücksichtigte Plateau und erhalten Tabelle \ref{tab:Meth_1}. \\ 
+Da die Elektronenkonzentration unabhängig vom Magnetfeld ist, mitteln wir über jedes berücksichtigte Plateau und erhalten Tab. \ref{tab:Meth_1}. \\ 
 
 Die bestimmten Elektronenkonzentrationen liegen ausgesprochen nah beieinander, es gibt allerdings kleine Abweichungen, die nicht von der Standartabweichung in den einzelnen Messreihen erklärt wird. Auffällig ist, das bei beiden Messungen, bei denen der Längswiderstand zwischen direkt nebeneinander liegenden Kontakten gemessen wurde, eine leicht höhere Elektronenkonzentration festzustellen ist. Insgesamt erscheinen die Abweichungen aber insignifikant. \\
 
-Die Elektronenmobilität lässt sich nun (und auch bei den anderen Ansätzen) mit Gl. \ref{eq:Mobilitaet} aus der E-Konzentration und dem spezifischen Widerstand der Hallgeometrie berechnen. Dabei ist zu beachten, das bei den Messungen [....] mit einem Abstand von zwei Kontakten gemessen wurde. Der spezifische Widerstand ist hier also doppelt so groß. Die Ergebnisse sind ebenfalls Tabelle \ref{tab:Meth_1} zu entnehmen. Im Gegensatz zur E-Konzentration beobachten wir hier sig. Schwankungen. Da diese Schwankungen bei allen Ansätzen gleichermaßen auftreten, diskutieren wir sie in Abschnitt \ref{sec:Schwankungen} zusammenfassend.
+Die Elektronenmobilität lässt sich nun (und auch bei den anderen Ansätzen) mit Gl. \ref{eq:Mobilitaet} aus der E-Konzentration und dem spezifischen Widerstand der Hallgeometrie berechnen. Dabei ist zu beachten, das bei einigen Messungen mit einem Abstand von zwei Kontakten gemessen wurde. Der spezifische Widerstand ist hier also doppelt so groß. Die Ergebnisse sind ebenfalls Tabelle \ref{tab:Meth_1} zu entnehmen. Im Gegensatz zur E-Konzentration beobachten wir hier sig. Schwankungen. Da diese Schwankungen bei allen Ansätzen gleichermaßen auftreten, diskutieren wir sie in Abschnitt \ref{sec:Schwankungen} zusammenfassend.
 
 \begin{table}
 	\centering
@@ -142,9 +142,4 @@ Für Konzentration und Mobilität erhalten wir die in Tab \ref{tab:Photo} darges
 \end{table}
 Bei den Messreihen mit dauerhaftem Photoeffekt beobachten wir wie erwartet eine (ca. $1.5x$) höhere Elektronenkonzentration, das Auftreten eines dauerhaften Photoeffekts können wir daher experimentell bestätigen. Wir beobachten allerdings auch einen vergleichsweise großen Unterschied zwischen den Berechnungsmethoden. Da die Probleme, die interessanten Punkte im quantenmechanischen Regime zu verordnen auf das klassische nicht zutreffen, weisen wir den mit Methode 3 bestimmten Werten eine höhere Verlässlichkeit zu. 
 
-Überraschend ist hingegen die deutlich höhere Elektronenmobilität bei Messreihen mit dauerhaftem Photoeffekt. 
-
-\subsubsection{Erklärungsversuche}
-
-
-
+Überraschend ist hingegen die deutlich höhere Elektronenmobilität bei Messreihen mit dauerhaftem Photoeffekt, da diese nach Gl. \ref{eq:Mobilitaet} direkt antiproportional von der Elektronendichte abhängt. Die gestiegene Mobilität ist allerdings dadurch erklärt, dass der spez. Widerstand eines Materials mit der Dichte an verfügbaren Ladungsträgern steigt - was ein hier stärkerer Effekt ist.
