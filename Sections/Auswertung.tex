@@ -7,7 +7,7 @@ Zwischen diesen Werten mit konstantem Magnetfeld kann es in den gemessenen Spann
 \subsection{Magnetotransportmessung}\label{sec:Mag_trans}
 Die Vermessung des Magnetotransport wurde wie bereits in \autoref{sec:Magnetotransport} ausgeführt an Probe P07 und über 4 verschiedene Kontaktpaare für den Hallwiderstand / -spannung bzw. der für den Strom angelegten Spannung / dem dort beobachteten Widerstand durchgeführt. Aus diesen Werten lässt sich dann mit den in \autoref{sec:Quanten-Hall-Effekt} erläuterten Gleichungen auf drei unterschiedlichen Wegen die Elektronenkonzentration und die Ladungsträgermobilität bestimmen. 
 
-Während jede dieser Methoden auf alle 4 Messreihen angewendet wurden, werden im Folgenden nur Darstellungen für eine repräsentativ angeführt. Die Vorgehensweisen lassen sich auf die Übrigen Reihen ohne nennenswerten Anpassungen übertragen - auf Unterschiede wird eingegangen. Die so bestimmten Größen werden für alle Messreihen angegeben und (vergleiched) diskutiert.
+Während jede dieser Methoden auf alle 4 Messreihen angewendet wurde, werden im Folgenden nur Darstellungen für eine repräsentativ angeführt. Die Vorgehensweisen lassen sich auf die Übrigen Reihen ohne nennenswerten Anpassungen übertragen - auf Unterschiede wird eingegangen. Die so bestimmten Größen werden für alle Messreihen angegeben und (vergleichend) diskutiert.
 
 \subsubsection{Methode 1: Bestimmung der Hallplateaus}
 Nach Gl. \ref{eq:ElektrKonz1} lässt sich aus der Lage der Hallplateaus sowie den entsprechenden Füllfaktoren die Elektronenkonzentration berechnet werden. Dafür muss nach Gl. \ref{eq:Fuellfaktor} der Füllfaktor bestimmt werden - wir benötigen daher zusätzlich die zu den Plateaus korrespondierenden Hallwiderstände.  Betrachten wir daher die repräsentative Darstellung einer Messreihe in Abb. \ref{abb:P07_Meth_1}:
@@ -23,9 +23,8 @@ Man erkennt sehr gut die SdH-Oszillation sowie zwei klare Hallplateaus für Magn
 \end{figure}
 
 Wir konnten so in jeder Messreihe für die Füllfaktoren $\nu = 6$, $\nu = 8$ und noch $\nu = 10 $ (relativ) klare Plateaus messen. Für die Faktoren $\nu = 12, 14, 16, 18$ lassen sich der SdH-Oszillation noch angedeutete Plateaus zuordnen. Diesen Bereich ordnen wir daher dem quantenmechanischen Regime zu und nutzen ihn für diese sowie für die in Abschnitt \ref{subsubsec:Meth_2} beschriebene Methode. \\
-\\
 Für jedes identifizierte Hallplateau berechnen wir nun die Elektronendichte nach Gl. \ref{eq:ElektrKonz1} \footnote{Die Werte für die Elementarladung und das Plank'sche Wirkungsquantum wurden dem Python-Package Scipy.constants entnommen.}. Die Werte sind für Messreihe P07\_1\_A exemplarisch in Tab. \ref{tab:P07_Meth_1} zu finden. \\
-\\
+
 Da die Elektronenkonzentration unabhängig vom Magnetfeld ist, mitteln wir über jedes berücksichtigte Plateau und erhalten Tab. \ref{tab:Meth_1}. \\ 
 
 Die bestimmten Elektronenkonzentrationen liegen ausgesprochen nah beieinander, es gibt allerdings kleine Abweichungen, die nicht von der Standartabweichung in den einzelnen Messreihen erklärt wird. Auffällig ist, das bei beiden Messungen, bei denen der Längswiderstand zwischen direkt nebeneinander liegenden Kontakten gemessen wurde, eine leicht höhere Elektronenkonzentration festzustellen ist. Insgesamt erscheinen die Abweichungen aber insignifikant. \\
@@ -115,7 +114,7 @@ Für die beleuchteten Fälle gestaltet sich die Auswertung schwieriger. Betracht
 Gleichzeitig ist eine exakte Bestimmung der Lage der Hallplateaus aus dem Verlauf der Hallspannung selbst kaum möglich, teilweise aus den gleichen Gründen wie schon in Abschnitt \ref{sec:Mag_trans}, aber auch, weil bei erkennbaren Plateaus die Konstanz weniger gut gegeben ist. Im Gegensatz zum Längswiderstand erreicht der Hallwiderstand nur niedrigere Werte. Da nach Gl. \ref{eq:Fuellfaktor} der Füllfaktor vom Hallwiderstand antiproportional abhängt hätten erkennbare Hallplateaus hier höhrere Faktoren.
  
 Aus diesen Gründen wird auf eine Bestimmung von E-Konzentration und -mobilität nach Methode 1 hier verzichtet. Eine Erklärung dieser Beobachtung wird im Verlauf dieses Abschnitts erfolgen. \\
-\\
+
 Eine Anwendung der übrigen Methoden ist allerdings weiterhin möglich (s. Abb. \ref{abb:P04_Meth_2} und \ref{abb:P04_Meth_3}).
 Für Konzentration und Mobilität erhalten wir die in Tab \ref{tab:Photo} dargestellten Messwerte. \\
 
