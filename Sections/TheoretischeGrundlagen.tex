@@ -9,7 +9,7 @@ Dieser kann klassisch wie folgt erklärt werden:
 Bewegen sich die Ladungsträger in einem Magnetfeld, das einen senkrechten Anteil zur Bewegungsrichtung hat, so wirkt auf die Ladungsträger (Ladung $q$, Geschwindigkeit $v$) eine nicht-verschwindende \emph{Lorentz-Kraft} senkrecht zum Strom und zum Magnetfeld (zumindest bei fehlenden äußeren elektrischen Feldern). Die dadurch hervorgerufene Ablenkung der Ladungsträger führt zur Ausbildung eines elektrischen Feldes, welches eine der ablenkenden Kraft entgegengerichtete Kraft erzeugt. Dieses \emph{Hall-Feld} baut sich solange auf, bis die daraus resultierende Kraft die des Magnetfeldes gerade kompensiert.
 Es folgt die Bedingung an die Lorentz-Kraft
 $$\V F_L = q(\V E_H + \V B\times \V v) = 0,$$
-wobei $\V E_H$ das Hall-Feld bezeichne und $\V B$ senkrecht zum Strom sei.
+wobei $\V E_H$ das Hall-Feld bezeichne und $\V B$ senkrecht zum Strom sei (da eine mögliche zum Strom parallele Komponente aufgrund des Kreuzprodukts keine Rolle spielt).
 Dadurch lassen sich die relevanten Größen in Beziehung setzen. Für die Hall-Spannung $U_H$ gilt bei einer Stromstärke $I$
 \begin{equation}\label{eq:HallSpannung}
 U_H\propto\frac{I\cdot B}{(\text{Probendicke}\parallel \V B)}.
@@ -35,7 +35,7 @@ Für die theoretische Beschreibung wird der Hamilton-Operator als eine Summe der
 
 Speziell beim 2DEG nimmt man das Potential in \emph{einer} Raumrichtung als Potentialtopf an. Für diese Richtung ergeben sich, wie für einen Potentialtopf üblich, (endlich viele) diskrete Energieniveaus. Die Menge der Lösungen der (stationären) eindimensionalen Schrödinger-Gleichung zu je einem dieser Energieeigenwerte bezeichnet man als \emph{Subband}.
 In den anderen beiden Richtungen kann die Bewegung ungehindert ablaufen, wird also durch den Hamilton-Operator eines zweidimensionalen freien Teilchens beschrieben, jedoch mit einer effektiven Masse anstatt der üblichen Elektronenmasse.
-Praktisch kann ein 2DEG z.B. an Grenzflächen passender Heterostrukturen erzeugt werden.
+Praktisch kann ein 2DEG z. B. an Grenzflächen passender Heterostrukturen erzeugt werden.
 
 \clearpage
 
@@ -50,13 +50,22 @@ wobei
 \begin{equation}\label{eq:vKlitzing}
 R_K := \frac{h}{e^2}
 \end{equation}
-als \emph{von-Klitzing-Konstante} bezeichnet wird und $\nu$ der sogenannte \emph{Füllfaktor} ist. Dieser nimmt zunächst ganzzahlige Werte an, die bei wachsenden Magentfeldern kleiner werden. Bei sehr hohen Magentfeldern erhält man jedoch auch echt rationale Werte für $\nu$. Man unterscheidet entsprechend den \emph{integralen} und den \emph{fraktionalen Quan-ten-Hall-Effekt}.
+mit dem Planck'schen Wirkungsquantum $h$ und der Elementarladung $e$ als \emph{von-Klitzing-Konstante} bezeichnet wird und $\nu$ der sogenannte \emph{Füllfaktor} ist. Dieser nimmt zunächst ganzzahlige Werte an, die bei wachsenden Magentfeldern kleiner werden. Bei sehr hohen Magentfeldern erhält man jedoch auch echt rationale Werte für $\nu$. Man unterscheidet entsprechend den \emph{integralen} und den \emph{fraktionalen Quanten-Hall-Effekt}.
+\\\\
 
-Dem Füllfaktor lässt sich noch eine andere Bedeutung geben, welche auch die Namensgebung begründet.
-In einem äußeren Magnetfeld wird die Bewegung der Elektronen auch in der „freien“ Ebene beeinflusst und entspricht dann nicht mehr der von freien Teilchen. Hat das Magnetfeld eine zur Ebene senkrechte Komponente, so lässt sich (klassisch) erklären, dass die Elektronen durch die Lorentz-Kraft auf Kreisbahnen gezwungen werden (vgl. \autoref{sec:HallEffekt}). Auf diesen bewegen sie sich mit der \emph{Zyklotronfrequenz}
+Um den Effekt zu erklären, bemerkt man zunächst, dass der Hamiltonoperator $H$ des Systems bei einem senkrecht zum 2DEG (z.B. in $z$-Richtung mit 2DEG in der $x$-$y$-Ebene) angelegten Magnetfeld $\V B$ separiert
+$$ H = H_z + H_L, $$
+wobei $H_z$ der Anteil \glqq in Richtung des Magnetfelds\grqq\ sei\footnote{D. h., dass bei einem Ansatz $\Psi(x,y,z) = \psi(x,y)\phi(z)$ gilt $$H\Psi = \psi\cdot H_z\phi + \phi\cdot H_L\psi$$ sodass die Eigenwertgleichung separiert}.
+$H_C$ lässt sich dann als Hamiltonoperator eines harmonischen Oszillators mit der \emph{Zyklotronfrequenz}
 $$\omega_C = \frac{eB}{m^*}$$
-wobei das Magnetfeld $\V B$ wieder als senkrecht zur Ebene angenommen wurde und $m^*$ die effektive Masse bezeichne. Berechnet man nun die Energien, so erhält man neben den quantisierten Energien des Potentialtopfs und dem Beitrag der Spin-Magnetfeld-Wechselwirkung auch einen Beitrag durch Energieniveaus eines harmonischen Oszillators mit Frequenz $\omega_C$. Letztere werden auch als \emph{Landau-Niveaus} bezeichnet. Der Füllfaktor
-lässt sich nun mit der Anzahl der besetzten Landau-Niveaus in Beziehung setzen. Man erhält dadurch letztlich
+erkennen ($m^*$ bezeichnet die effektive Masse).
+Dieser besitzt Eigenwerte
+$$ E_N^L = \hbar \omega_C(N + \frac{1}{2}), $$
+wobei $2\pi\hbar = h$.\\
+Man erhält dadurch eine Aufspaltung der (Gesamt-)Energieniveaus bei nicht-verschwindendem Magnetfeld. 
+Die Energieniveaus $E_N^L$ nennt man auch \emph{Landau-Niveaus}.
+Den Füllfaktor $\nu$ erhält man nun als Anzahl der besetzten Landau-Niveaus (im Subband) als
+
 \begin{equation}\label{eq:Fuellfaktor}
 \nu = \frac{n_eh}{Be}
 \end{equation}
@@ -65,7 +74,14 @@ mit der Elektronenkonzentration $n_e$. Diese lässt sich also gemäß der Gleich
 n_e = \frac{\nu Be}{h}
 \end{equation}
 aus einer Messung des Hall-Widerstands bestimmen, nachdem man die Plateaus den entsprechenden Füllfaktoren zugeordnet hat.
-Alternativ kann man $U_H$, resp. $R_H$ auch gegen den Kehrwert $1/B$ des Magnetfeldes auftragen und die Periode
+\\\\
+Die Elektronenzustände lassen sich einteilen in \emph{lokalisierte} und \emph{delokalisierte} Zustände.
+Elektronen in delokalisierten Zuständen können sich frei im 2DEG bewegen und zum Stromfluss beitragen, während Elektronen in lokalisierten Zuständen nicht beitragen können. 
+Da der Abstand der Landau-Niveaus mit dem Magnetfeld wächst, verschieben sich diese mit wachsendem Magentfeld zu höheren Energien, wobei auch immer wieder die Fermi-Energie erreicht wird.
+Da nur Zustände in der Nähe der Fermi-Energie zum Ladungstransport beitragen, hängen Leitfähigkeit und damit Längswiderstand davon ab, ob gerade ein lokalisierter oder ein delokalisierter Zustand die Fermi-Energie erreicht. Delokalisierte Zustände sorgen dann für einen linearen Anstieg des Hallwiderstands, während er bei lokalisierten Zuständen konstant bleibt. 
+\\
+
+Alternativ zu der Bestimmung von $n_e$ über den Füllfaktor und \autoref{eq:ElektrKonz1} kann man $U_H$, resp. $R_H$ auch gegen den Kehrwert $1/B$ des Magnetfeldes auftragen und die Periode
 $\Delta$ bestimmen. $n_e$ ergibt sich dann gemäß
 \begin{equation}\label{eq:ElektrKonz2}
 n_e = \frac{2e}{h\Delta}.
@@ -77,9 +93,9 @@ n_e = \frac{1}{e}\left(\frac{\partial R_H}{\partial B}\right)^{-1}
 verwenden.\\
 Die Elektronenmobilität ergibt sich zu
 \begin{equation}\label{eq:Mobilitaet}
-\mu_e \propto \frac{1}{e n_eR_{xx}(0)},
+	\mu_e = \frac{l}{b}\frac{1}{e n_eR_{xx}(0)}
 \end{equation}
-wobei der Proportionalitätsfaktor durch das Verhältnis aus Kontaktabstand und Breite der Hallgeometrie gegeben ist.
+mit Kontaktabstand $l$ und Breite $b$ der Hallgeometrie.
 \nocite{qhe}
 \nocite{wiki-fg}
 \nocite{wiki-he}
